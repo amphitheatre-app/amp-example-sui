@@ -1,0 +1,21 @@
+name = "amp-example-sui"
+version = "0.1.0"
+edition = "v1"
+description = "A simple Sui example app"
+readme = "README.md"
+homepage = "https://github.com/amphitheatre-app/amp-example-sui"
+repository = "https://github.com/amphitheatre-app/amp-example-sui"
+license = "Apache-2.0"
+license-file = "LICENSE"
+keywords = ["example", "sui", "getting-started"]
+categories = ["example"]
+
+[build]
+builder = "ghcr.io/amp-buildpacks/move-builder"
+
+[partners]
+sui = { version = "stable", registry = "catalog" }
+
+[build.env]
+BP_ENABLE_SUI_DEPLOY = "false"
+# BP_SUI_DEPLOY_PRIVATE_KEY = "<Your-Deploy-Private-Key>"
